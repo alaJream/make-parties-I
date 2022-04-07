@@ -1,0 +1,20 @@
+{
+  "name": "make-parties-i",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alaJream/make-parties-I.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alaJream/make-parties-I/issues"
+  },
+  "homepage": "https://github.com/alaJream/make-parties-I#readme"
+}
