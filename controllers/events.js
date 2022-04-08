@@ -24,13 +24,12 @@ module.exports = function (app, models) {
 
     // SHOW
     app.get('/events/:id', (req, res) => {
-        models.Event.findByPk(req.params.id).then((event) => {
-        res.render('events-show', { event: event })
+        models.Event.findByPk(req.params.id, { include: [{ model: models.Rsvp }] }).then(event => {
+            res.render('events-show', { event: event });
         }).catch((err) => {
-        console.log(err.message);
+            console.log(err.message);
         })
-    })
-
+    });
     // EDIT
     app.get('/events/:id/edit', (req, res) => {
         models.Event.findByPk(req.params.id).then((event) => {

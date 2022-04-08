@@ -30,7 +30,7 @@ app.use(methodOverride('_method'))
 // ]
   
 require('./controllers/events')(app, models);
-
+require('./controllers/rsvps')(app, models);
 
 
 // ---------------------------------------------------------------------------------------------------------
