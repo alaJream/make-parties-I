@@ -1,4 +1,5 @@
 //events.js
+const moment = require('moment')
 
 module.exports = function (app, models) {
 
@@ -22,7 +23,7 @@ module.exports = function (app, models) {
         });
     })
 
-    /app.get('/events/:id', (req, res) => {
+    app.get('/events/:id', (req, res) => {
         models.Event.findByPk(req.params.id, { include: [{ model: models.Rsvp }] }).then(event => {
             let createdAt = event.createdAt;
             createdAt = moment(createdAt).format('MMMM Do YYYY, h:mm:ss a');
@@ -32,7 +33,7 @@ module.exports = function (app, models) {
             console.log(err.message);
         })
     });
-    
+
     // EDIT
     app.get('/events/:id/edit', (req, res) => {
         models.Event.findByPk(req.params.id).then((event) => {
