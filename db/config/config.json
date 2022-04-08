@@ -20,6 +20,7 @@
        "ssl": {
          "require": true,
          "rejectUnauthorized": false
-       }
-     }
-   }
+      }
+    }
+  }
+}
